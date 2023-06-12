@@ -1,16 +1,15 @@
 import React from "react";
 import { CardLayout } from "../layout";
+import { LayoutBuilderProps } from "../types/builder-types";
 
 const LAYOUTS: any = {
     CARD: CardLayout,
-    //... add other control types here
 };
 
-const LayoutBuilder = (props: any) => {
-    const { control } = props;
+const LayoutBuilder: React.FC<LayoutBuilderProps> = ({ control, children }) => {
     const LayoutComponent = LAYOUTS[control.type];
 
-    return <LayoutComponent children={props.children} />;
+    return <LayoutComponent>{children}</LayoutComponent>;
 };
 
 export default LayoutBuilder;

@@ -1,25 +1,21 @@
 import React from "react";
+import { SectionBuilderProps } from "../types";
 import ControlBuilder from "./ControlBuilder";
 import LayoutBuilder from "./LayoutBuilder";
 
-const SectionBuilder = (props: any) => {
-    const { control } = props;
+const SectionBuilder: React.FC<SectionBuilderProps> = ({ control, dataKey = control.dataKey }) => {
     const controls = control.controls;
-
-    const dataKey = props.dataKey ?? control.dataKey;
     const childDataKey = `${dataKey}.${control.id}`;
 
-    const getControls = () => {
-        return (
+    return (
+        <LayoutBuilder control={control}>
             <div className="row">
-                {controls.map((control: any) => {
-                    return <ControlBuilder key={childDataKey} control={control} dataKey={childDataKey} />;
-                })}
+                {controls.map((control: any, index: number) => (
+                    <ControlBuilder key={`${childDataKey}-${index}`} control={control} dataKey={childDataKey} />
+                ))}
             </div>
-        );
-    };
-
-    return <LayoutBuilder control={control} children={getControls()} />;
+        </LayoutBuilder>
+    );
 };
 
 export default SectionBuilder;
