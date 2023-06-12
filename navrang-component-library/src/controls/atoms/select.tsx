@@ -1,6 +1,6 @@
 import React from "react";
 
-export const SelectControl = () => {
+const Select = () => {
     return (
         <select className="form-select" aria-label="Default select example">
             <option selected>Open this select menu</option>
@@ -10,3 +10,5 @@ export const SelectControl = () => {
         </select>
     );
 };
+
+export default Select;

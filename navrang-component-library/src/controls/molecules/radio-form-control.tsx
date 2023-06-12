@@ -1,5 +1,7 @@
 import React from "react";
 
-export const RadioFormControl = () => {
+const RadioFormControl = () => {
     return <div>RadioFormControl</div>;
 };
+
+export default RadioFormControl;

@@ -1,13 +1,15 @@
 import React from "react";
-import { InputControl } from "../basic-controls";
+import { Select } from "../atoms";
 
-export const TextFormControl = () => {
+const SelectFormControl = () => {
     return (
         <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
                 Email address
             </label>
-            <InputControl />
+            <Select />
         </div>
     );
 };
+
+export default SelectFormControl;

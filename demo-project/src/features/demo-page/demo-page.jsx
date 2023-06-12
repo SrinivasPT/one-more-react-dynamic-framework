@@ -1,5 +1,5 @@
+import { TextFormControl } from "navrang-component-library/src";
 import React from "react";
-import { TextFormControl } from "../../../../navrang-component-library/src/controls/form-controls/TextFormControl";
 
 const DemoPage = () => {
     return (

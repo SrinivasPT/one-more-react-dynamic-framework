@@ -1,5 +1,7 @@
 import React from "react";
 
-export const CheckControl = () => {
+const Check = () => {
     return <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />;
 };
+
+export default Check;

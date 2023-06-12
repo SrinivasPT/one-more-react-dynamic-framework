@@ -1,5 +1,7 @@
 import React from "react";
 
-export const CheckboxFormControl = () => {
+const CheckboxFormControl = () => {
     return <div>CheckboxFormControl</div>;
 };
+
+export default CheckboxFormControl;

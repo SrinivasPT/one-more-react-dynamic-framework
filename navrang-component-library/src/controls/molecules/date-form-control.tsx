@@ -1,5 +1,7 @@
 import React from "react";
 
-export const DateFormControl = () => {
+const DateFormControl = () => {
     return <div>DateFormControl</div>;
 };
+
+export default DateFormControl;

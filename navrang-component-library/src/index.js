@@ -1,5 +1,4 @@
-export * from "./context/index";
-export * from "./controls/basic-controls/index";
-export * from "./controls/complex-controls/index";
-export * from "./controls/form-controls/index";
-export * from "./layout/index";
+export * from "./context/index.ts";
+export * from "./controls/atoms/index.ts";
+// export * from "./controls/compounds/index";
+export * from "./controls/molecules/index.ts";

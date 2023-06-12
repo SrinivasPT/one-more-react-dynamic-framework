@@ -1,5 +1,7 @@
 import React from "react";
 
-export const NumberFormControl = () => {
+const NumberFormControl = () => {
     return <div>NumberFormControl</div>;
 };
+
+export default NumberFormControl;
