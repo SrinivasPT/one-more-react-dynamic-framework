@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../../../src/controls/molecules/radio-form-control.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst RadioFormControl = () => {\r\n    return <div>RadioFormControl</div>;\r\n};\r\n\r\nexport default RadioFormControl;\r\n"],"names":[],"mappings":";;AAEA,IAAM,gBAAgB,GAAG,YAAA;AACrB,IAAA,OAAO,oDAA2B,CAAC;AACvC;;;;"}

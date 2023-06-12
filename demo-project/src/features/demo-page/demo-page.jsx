@@ -1,4 +1,4 @@
-import { TextFormControl } from "navrang";
+import { TextFormControl } from "navrang/controls";
 import React from "react";
 
 const DemoPage = () => {

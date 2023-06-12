@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../../src/context/page-context.ts"],"sourcesContent":["import { createContext } from \"react\";\r\n\r\nconst PageContext = createContext({});\r\n\r\nexport default PageContext;\r\n"],"names":[],"mappings":";;AAEA,IAAM,WAAW,GAAG,aAAa,CAAC,EAAE;;;;"}

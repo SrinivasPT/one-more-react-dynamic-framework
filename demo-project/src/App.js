@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import DemoPage from "./features/demo-page/demo-page";
 
