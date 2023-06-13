@@ -9,7 +9,7 @@ const PageInitialState: PageState = {
         selectedDetail: {},
     },
     uiState: {
-        isLoading: false,
+        isLoading: true,
         isSearching: false,
         isDetailLoading: false,
     },

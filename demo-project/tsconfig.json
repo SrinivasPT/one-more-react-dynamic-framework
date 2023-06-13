@@ -20,7 +20,8 @@
             "navrang/context": ["../navrang/src/context"],
             "navrang/hooks": ["../navrang/src/hooks"],
             "navrang/types": ["../navrang/src/types"],
-            "navrang/builder": ["../navrang/src/builder"]
+            "navrang/builder": ["../navrang/src/builder"],
+            "navrang/services": ["../navrang/src/services"]
             // add other necessary paths
         }
     },

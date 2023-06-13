@@ -7,6 +7,8 @@ export default {
         hooks: "src/hooks/index.ts",
         types: "src/types/index.ts",
         builder: "src/builder/index.ts",
+        services: "src/services/index.ts",
+        types: "src/types/index.ts",
     },
     output: {
         dir: "dist",
@@ -15,7 +17,7 @@ export default {
         entryFileNames: "[name]/index.js",
         chunkFileNames: "[name]/[hash].js",
     },
-    external: ["react", "loglevel", "axios", "lodash", "react-dom", "react-router-dom"],
+    external: ["react", "loglevel", "axios", "lodash", "react-dom"],
     plugins: [typescript()],
     preserveModules: true,
 };

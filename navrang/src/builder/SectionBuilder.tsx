@@ -5,13 +5,12 @@ import LayoutBuilder from "./LayoutBuilder";
 
 const SectionBuilder: React.FC<SectionBuilderProps> = ({ control, dataKey = control.dataKey }) => {
     const controls = control.controls;
-    const childDataKey = `${dataKey}.${control.id}`;
 
     return (
         <LayoutBuilder control={control}>
             <div className="row">
                 {controls.map((control: any, index: number) => (
-                    <ControlBuilder key={`${childDataKey}-${index}`} control={control} dataKey={childDataKey} />
+                    <ControlBuilder key={`${dataKey}-${index}`} control={control} dataKey={`${dataKey}.${control.id}`} />
                 ))}
             </div>
         </LayoutBuilder>

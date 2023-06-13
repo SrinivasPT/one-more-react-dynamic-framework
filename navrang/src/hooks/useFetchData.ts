@@ -5,6 +5,7 @@ import { FormDataFetchArgs, PageActionType } from "../types";
 
 const useFetchData = (props: FormDataFetchArgs) => {
     const { configUrl, dataUrl, dispatch } = props;
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -24,7 +25,7 @@ const useFetchData = (props: FormDataFetchArgs) => {
         };
 
         fetchData();
-    }, [dispatch]);
+    }, []);
 };
 
 export default useFetchData;

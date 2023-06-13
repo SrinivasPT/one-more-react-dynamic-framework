@@ -1,6 +1,6 @@
 import React from "react";
 import { CardLayout } from "../layout";
-import { LayoutBuilderProps } from "../types/builder-types";
+import { LayoutBuilderProps } from "../types";
 
 const LAYOUTS: any = {
     CARD: CardLayout,

@@ -1,18 +1,21 @@
 {
     "DEMO_PAGE_CONFIG": {
+        "id": "demoPage",
         "title": "Demo Page",
         "description": "This is a demo page.",
+        "dataKey": "personal",
         "controls": [
             {
                 "id": "firstName",
+                "dataKey": "firstName",
                 "label": "First Name",
-                "type": "text",
+                "type": "INPUT",
                 "required": true,
                 "placeholder": "Enter your first name"
             }
         ]
     },
     "DEMO_DATA": {
-        "firstName": "John"
+        "personal": { "firstName": "John" }
     }
 }
