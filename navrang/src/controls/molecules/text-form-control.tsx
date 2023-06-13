@@ -1,6 +1,6 @@
 import React from "react";
 import { ControlProps } from "../../types";
-import { Input } from "../atoms";
+import Input from "../atoms/input";
 
 const TextFormControl = (props: ControlProps) => {
     const { id, className, label } = props.control;

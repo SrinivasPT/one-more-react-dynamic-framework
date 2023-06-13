@@ -1,6 +1,6 @@
 import React from "react";
 import { ControlProps } from "../../types";
-import { Select } from "../atoms";
+import Select from "../atoms/select";
 
 const SelectFormControl = (props: ControlProps) => {
     return (

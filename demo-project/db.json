@@ -1,6 +1,6 @@
 {
     "DEMO_PAGE_CONFIG": {
-        "id": "demoPage",
+        "id": "personal",
         "title": "Demo Page",
         "description": "This is a demo page.",
         "dataKey": "personal",
