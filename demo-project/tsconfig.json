@@ -17,10 +17,10 @@
         "jsx": "react",
         "paths": {
             "navrang/controls": ["../navrang/src/controls"],
-            "navrang/layout": ["../navrang/src/layout"],
             "navrang/context": ["../navrang/src/context"],
-            "navrang/builder": ["../navrang/src/builder"],
-            "navrang/types": ["../navrang/src/types"]
+            "navrang/hooks": ["../navrang/src/hooks"],
+            "navrang/types": ["../navrang/src/types"],
+            "navrang/builder": ["../navrang/src/builder"]
             // add other necessary paths
         }
     },

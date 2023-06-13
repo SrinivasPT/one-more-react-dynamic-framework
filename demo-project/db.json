@@ -1,0 +1,18 @@
+{
+    "DEMO_PAGE_CONFIG": {
+        "title": "Demo Page",
+        "description": "This is a demo page.",
+        "controls": [
+            {
+                "id": "firstName",
+                "label": "First Name",
+                "type": "text",
+                "required": true,
+                "placeholder": "Enter your first name"
+            }
+        ]
+    },
+    "DEMO_DATA": {
+        "firstName": "John"
+    }
+}

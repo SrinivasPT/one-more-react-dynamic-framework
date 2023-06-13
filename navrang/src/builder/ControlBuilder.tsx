@@ -1,6 +1,7 @@
 import React from "react";
-import { Input, Radio, Select } from "../controls";
+
 import { ControlBuilderProps } from "../types";
+import { Input, Select, Radio } from "../controls";
 
 const CONTROL_COMPONENTS: any = {
     INPUT: Input,

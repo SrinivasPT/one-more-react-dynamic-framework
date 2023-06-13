@@ -4,8 +4,10 @@
     "main": "dist/index.js",
     "exports": {
         ".": "./dist/index.js",
-        "./context": "./dist/context/context/index.js",
-        "./controls": "./dist/controls/controls/index.js"
+        "./context": "./dist/src/context/context/index.js",
+        "./controls": "./dist/src/controls/controls/index.js",
+        "./builder": "./dist/src/builder/builder/index.js",
+        "./hooks": "./dist/src/hooks/hooks/index.js"
     },
     "files": [
         "dist",
@@ -24,17 +26,19 @@
         "@types/loglevel": "^1.6.3",
         "@types/react": "^18.2.6",
         "@types/react-dom": "^18.2.4",
+        "axios": "^1.4.0",
         "bootstrap": "^5.3.0-alpha3",
         "lodash": "^4.17.21",
-        "loglevel": "^1.8.1",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "loglevel": "^1.8.1"
     },
     "devDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "@babel/core": "^7.22.5",
         "@babel/preset-env": "^7.22.5",
         "@babel/preset-react": "^7.22.5",
         "@rollup/plugin-typescript": "^11.1.1",
+        "@types/axios": "^0.14.0",
         "@types/lodash": "^4.14.195",
         "react-scripts": "5.0.1",
         "rollup": "^2.79.1",
