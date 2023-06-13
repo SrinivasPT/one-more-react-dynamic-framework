@@ -13,7 +13,7 @@ export default {
         entryFileNames: "[name]/index.js",
         chunkFileNames: "[name]/[hash].js",
     },
-    external: ["react"],
+    external: ["react", "loglevel"],
     plugins: [typescript()],
     preserveModules: true,
 };

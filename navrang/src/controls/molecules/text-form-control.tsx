@@ -1,13 +1,15 @@
 import React from "react";
+import { ControlProps } from "../../types";
 import { Input } from "../atoms";
 
-const TextFormControl = () => {
+const TextFormControl = (props: ControlProps) => {
+    const { id, className, label } = props.control;
     return (
-        <div className="mb-3">
-            <label htmlFor="exampleFormControlInput1" className="form-label">
-                Email address
+        <div className={className}>
+            <label htmlFor={id} className="form-label">
+                {label}
             </label>
-            <Input />
+            <Input {...props} />
         </div>
     );
 };

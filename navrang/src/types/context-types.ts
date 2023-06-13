@@ -1,32 +1,4 @@
-// export const PageState = {
-//     config: {
-//         form: {},
-//     },
-//     data: {
-//         original: {},
-//         current: {},
-//         searchResults: [],
-//         selectedDetail: {},
-//     },
-//     uiState: {
-//         isLoading: false,
-//         isSearching: false,
-//         isDetailLoading: false,
-//     },
-//     filter: {
-//         currentQuery: {},
-//     },
-//     pagination: {
-//         currentPage: 1,
-//         itemsPerPage: 10,
-//         totalItems: 0,
-//     },
-//     error: {
-//         messages: [],
-//         searchError: null,
-//         detailError: null,
-//     },
-// };
+import { Dispatch } from "react";
 
 interface FormConfig {
     // Define the properties of the form config here
@@ -81,4 +53,9 @@ export const PageActionType = {
 export interface PageAction {
     type: string;
     payload?: any;
+}
+
+export interface PageContextProps {
+    state: PageState;
+    dispatch: Dispatch<PageAction>; // assuming PageAction is your action type for useImmerReducer
 }

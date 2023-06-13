@@ -1,15 +1,17 @@
 import React from "react";
-import { InputProps } from "../../types";
+import { useControl } from "../../hooks";
+import { ControlProps } from "../../types";
 
-const Input = (props: any) => {
-    const control: InputProps = props.control;
-    const data = "";
+const Input = (props: ControlProps) => {
+    const { getDynamicProps, onChange } = useControl();
+    const { control, dataKey, data, isHidden, isReadOnly } = getDynamicProps(props);
+
+    if (isHidden) return null;
 
     return (
         <input
             id={control.id}
             type={control.type}
-            disabled={control.readOnly ?? false}
             className={control.className}
             placeholder={control.placeholder}
             value={data || control.defaultValue || ""}
@@ -18,6 +20,9 @@ const Input = (props: any) => {
             maxLength={control.maxLength}
             min={control.min}
             max={control.max}
+            disabled={isReadOnly ?? control.readOnly ?? false}
+            readOnly={isReadOnly ?? control.readOnly ?? false}
+            onChange={(event) => onChange(event, dataKey)}
         />
     );
 };
