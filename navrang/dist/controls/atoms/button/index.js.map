@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["../../../../src/controls/atoms/button.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nexport const Button = () => {\r\n    return <div>ButtonFormControl</div>;\r\n};\r\n\r\nexport default Button;\r\n"],"names":[],"mappings":";;AAEa,IAAA,MAAM,GAAG,YAAA;AAClB,IAAA,OAAO,qDAA4B,CAAC;AACxC;;;;"}

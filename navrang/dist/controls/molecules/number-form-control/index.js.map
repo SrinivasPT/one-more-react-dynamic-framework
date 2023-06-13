@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sources":["../../../../src/controls/molecules/number-form-control.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst NumberFormControl = () => {\r\n    return <div>NumberFormControl</div>;\r\n};\r\n\r\nexport default NumberFormControl;\r\n"],"names":[],"mappings":";;AAEA,IAAM,iBAAiB,GAAG,YAAA;AACtB,IAAA,OAAO,qDAA4B,CAAC;AACxC;;;;"}
