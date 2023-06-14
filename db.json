@@ -10,21 +10,24 @@
                 "label": "First Name",
                 "type": "FC_TEXT",
                 "required": true,
-                "placeholder": "Enter your First Name"
+                "placeholder": "Enter your First Name",
+                "className": "col-md-6"
             },
             {
                 "id": "lastName",
                 "label": "Last Name",
                 "type": "FC_TEXT",
                 "required": true,
-                "placeholder": "Enter your Last Name"
+                "placeholder": "Enter your Last Name",
+                "className": "col-md-6"
             },
             {
                 "id": "addressLineOne",
                 "label": "Address Line 1",
                 "type": "INPUT",
                 "required": true,
-                "placeholder": "Enter your Address Line One"
+                "placeholder": "Enter your Address Line One",
+                "className": "col-md-6"
             }
         ]
     },
