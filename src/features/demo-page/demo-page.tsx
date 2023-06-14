@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import { useImmerReducer } from "use-immer";
 
 import log from "loglevel";
-import { SectionBuilder } from "navrang/builder";
-import { PageContext, PageInitialState, PageReducer } from "navrang/context";
-import { server } from "navrang/services";
-import { PageActionType } from "navrang/types";
+import { SectionBuilder } from "../../library/builder";
+import { PageContext, PageInitialState, PageReducer } from "../../library/context";
+import { server } from "../../library/services";
+import { PageActionType } from "../../library/types";
 
 const DemoPage = () => {
     const [state, dispatch] = useImmerReducer(PageReducer, PageInitialState);
@@ -42,7 +42,7 @@ const DemoPage = () => {
 
     return (
         <PageContext.Provider value={{ state, dispatch }}>
-            {!state.uiState.isLoading && <SectionBuilder control={state.formConfig} context={{ state, dispatch }} />}
+            {!state.uiState.isLoading && <SectionBuilder control={state.formConfig} />}
         </PageContext.Provider>
     );
 };

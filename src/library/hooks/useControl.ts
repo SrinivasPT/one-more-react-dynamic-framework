@@ -1,9 +1,11 @@
 import _ from "lodash";
 import log from "loglevel";
-import { PageActionType, PageContextProps } from "../types";
+import { useContext } from "react";
+import { PageContext } from "../context";
+import { PageActionType } from "../types";
 
-const useControl = (context: PageContextProps) => {
-    const { state, dispatch } = context;
+const useControl = () => {
+    const { state, dispatch } = useContext(PageContext);
 
     const getDynamicProps = (props: any) => {
         const dataKey = props.control.dataKey ?? props.dataKey;

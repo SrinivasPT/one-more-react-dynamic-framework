@@ -3,7 +3,7 @@ import { useControl } from "../../hooks";
 import { ControlProps } from "../../types";
 
 const Input = (props: ControlProps) => {
-    const { getDynamicProps, onChange } = useControl(props.context);
+    const { getDynamicProps, onChange } = useControl();
     const { control, dataKey, data, isHidden, isReadOnly } = getDynamicProps(props);
 
     if (isHidden) return null;

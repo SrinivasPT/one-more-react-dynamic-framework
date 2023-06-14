@@ -1,3 +1,0 @@
-# React Component Library
-
-One
