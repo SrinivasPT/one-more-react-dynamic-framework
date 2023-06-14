@@ -4,6 +4,7 @@ export interface InputProps {
     id: string;
     label: string;
     type: "INPUT" | "SELECT" | "RADIO";
+    dataType: "STRING" | "NUMBER" | "DATE" | "BOOLEAN" | "OBJECT" | "ARRAY";
     dataKey?: string;
     subType?: string;
     className?: string;
@@ -16,6 +17,7 @@ export interface InputProps {
     max?: number;
     hideExpression?: string;
     readOnlyExpression?: string;
+    validationExpression?: string;
     readOnly?: boolean;
     disabled?: boolean;
     onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;

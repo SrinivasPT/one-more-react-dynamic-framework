@@ -13,8 +13,7 @@ interface Data {
 
 interface UIState {
     isLoading: boolean;
-    isSearching: boolean;
-    isDetailLoading: boolean;
+    showErrors: boolean;
 }
 
 interface Filter {
@@ -48,6 +47,7 @@ export const PageActionType = {
     SET_STATE_FOR_KEY: "SET_STATE_FOR_KEY",
     REFRESH_DATA: "REFRESH_DATA",
     SET_ACTIONS: "SET_ACTIONS",
+    SUBMIT: "SUBMIT",
 };
 
 export interface PageAction {

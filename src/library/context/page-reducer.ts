@@ -19,6 +19,9 @@ const PageReducer = (state: PageState, action: any) => {
         case PageActionType.SET_ACTIONS:
             state.actions = action.payload;
             break;
+        case PageActionType.SUBMIT:
+            state.uiState.showErrors = true;
+            break;
         default:
             throw new Error(`Unhandled action type: ${action.type}`);
     }

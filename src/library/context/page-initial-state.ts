@@ -10,8 +10,7 @@ const PageInitialState: PageState = {
     },
     uiState: {
         isLoading: true,
-        isSearching: false,
-        isDetailLoading: false,
+        showErrors: false,
     },
     filter: {
         currentQuery: {},

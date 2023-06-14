@@ -5,7 +5,7 @@ const server: AxiosInstance = axios.create();
 // Request interceptor for API calls
 server.interceptors.request.use(
     (config: any) => {
-        config.headers = config.headers || {}; // Ensure headers is not undefined
+        config.headers = config.headers || {};
         const token = localStorage.getItem("token");
         if (token) {
             config.headers["Authorization"] = `Bearer ${token}`;

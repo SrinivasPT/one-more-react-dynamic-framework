@@ -3,16 +3,23 @@ import log from "loglevel";
 import { useContext } from "react";
 import { PageContext } from "../context";
 import { PageActionType } from "../types";
+import useValidation from "./use-validation";
 
 const useControl = () => {
     const { state, dispatch } = useContext(PageContext);
+    const { validate } = useValidation();
 
     const getDynamicProps = (props: any) => {
+        // Get the dynamic props
         const dataKey = props.control.dataKey ?? props.dataKey;
         const data = _.get(state.data.current, dataKey) ?? "";
         const isHidden = evaluateExpression(props.control?.hideExpression);
         const isReadOnly = evaluateExpression(props.control?.readOnlyExpression);
-        return { dataKey, data, isHidden, isReadOnly, control: props.control };
+
+        // Validate the field
+        const { isValid, errorMessages } = validate(props.control, data);
+
+        return { dataKey, data, isHidden, isReadOnly, control: props.control, isValid, errorMessages, state };
     };
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>, dataKey: string) => {
@@ -24,6 +31,7 @@ const useControl = () => {
 
         try {
             const model = state.data.current; // Assuming 'data' is always defined
+            // eslint-disable-next-line no-new-func
             const func = new Function("model", `return ${expression}`);
             const value = func(model);
             return value;

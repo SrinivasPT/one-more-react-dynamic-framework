@@ -6,27 +6,30 @@
         "dataKey": "personal",
         "controls": [
             {
-                "id": "firstName",
-                "label": "First Name",
+                "id": "name",
+                "label": "Name",
                 "type": "FC_TEXT",
+                "dataType": "STRING",
                 "required": true,
-                "placeholder": "Enter your First Name",
+                "placeholder": "Enter your Name",
                 "className": "col-md-6"
             },
             {
-                "id": "lastName",
+                "id": "age",
                 "label": "Last Name",
                 "type": "FC_TEXT",
+                "dataType": "NUMBER",
                 "required": true,
-                "placeholder": "Enter your Last Name",
+                "placeholder": "Enter your Age",
                 "className": "col-md-6"
             },
             {
-                "id": "addressLineOne",
-                "label": "Address Line 1",
-                "type": "INPUT",
+                "id": "dob",
+                "label": "Date Of Birth",
+                "type": "FC_TEXT",
+                "dataType": "STRING",
                 "required": true,
-                "placeholder": "Enter your Address Line One",
+                "placeholder": "Enter your Date Of Birth",
                 "className": "col-md-6"
             }
         ]
