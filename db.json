@@ -1,6 +1,8 @@
 {
     "DEMO_PAGE_CONFIG": {
         "id": "personal",
+        "type": "SECTION",
+        "layout": "CARD",
         "title": "Demo Page",
         "description": "This is a demo page.",
         "dataKey": "personal",
@@ -31,10 +33,56 @@
                 "required": true,
                 "placeholder": "Enter your Date Of Birth",
                 "className": "col-md-6"
+            },
+            {
+                "id": "address",
+                "title": "Address",
+                "description": "This is a demo page.",
+                "dataKey": "personal.address",
+                "type": "FREE_FORM_GRID",
+                "layout": "CARD",
+                "controls": [
+                    {
+                        "id": "addressLineOne",
+                        "label": "Address Line One",
+                        "type": "FC_TEXT",
+                        "dataType": "STRING",
+                        "required": true,
+                        "placeholder": "Enter Address Line One",
+                        "className": "col-md-6"
+                    },
+                    {
+                        "id": "addressLineTwo",
+                        "label": "Address Line One",
+                        "type": "FC_TEXT",
+                        "dataType": "STRING",
+                        "required": true,
+                        "placeholder": "Enter Address Line One",
+                        "className": "col-md-6"
+                    },
+                    {
+                        "id": "city",
+                        "label": "City",
+                        "type": "FC_TEXT",
+                        "dataType": "STRING",
+                        "required": true,
+                        "placeholder": "Enter City",
+                        "className": "col-md-6"
+                    },
+                    {
+                        "id": "country",
+                        "label": "Country",
+                        "type": "FC_TEXT",
+                        "dataType": "STRING",
+                        "required": true,
+                        "placeholder": "Enter Country",
+                        "className": "col-md-6"
+                    }
+                ]
             }
         ]
     },
     "DEMO_DATA": {
-        "personal": { "firstName": "John" }
+        "personal": { "firstName": "John", "address": [] }
     }
 }

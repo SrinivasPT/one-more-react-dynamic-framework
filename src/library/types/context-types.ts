@@ -42,13 +42,15 @@ export interface PageState {
     error: ErrorState;
 }
 
-export const PageActionType = {
+export const PageAction = {
     SET_INITIAL_STATE: "SET_INITIAL_STATE",
     SET_STATE_FOR_KEY: "SET_STATE_FOR_KEY",
     REFRESH_DATA: "REFRESH_DATA",
     SET_ACTIONS: "SET_ACTIONS",
     SUBMIT: "SUBMIT",
-};
+} as const;
+
+export type PageActionType = keyof typeof PageAction;
 
 export interface PageAction {
     type: string;

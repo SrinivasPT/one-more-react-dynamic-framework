@@ -1,6 +1,6 @@
 import _ from "lodash";
 import log from "loglevel";
-import { PageActionType, PageContextProps } from "../types";
+import { PageAction, PageContextProps } from "../types";
 
 export const getDynamicProps = (props: any) => {
     const { control, context } = props;
@@ -12,7 +12,7 @@ export const getDynamicProps = (props: any) => {
 };
 
 export const onChange = (event: React.ChangeEvent<HTMLInputElement>, dataKey: string, context: PageContextProps) => {
-    context.dispatch({ type: PageActionType.SET_STATE_FOR_KEY, payload: { dataKey, value: event.target.value } });
+    context.dispatch({ type: PageAction.SET_STATE_FOR_KEY, payload: { dataKey, value: event.target.value } });
 };
 
 export const evaluateExpression = (expression: string | undefined, context: PageContextProps): any => {

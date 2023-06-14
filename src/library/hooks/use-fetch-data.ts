@@ -1,7 +1,7 @@
 import log from "loglevel";
 import { useEffect } from "react";
 import { server } from "../services";
-import { FormDataFetchArgs, PageActionType } from "../types";
+import { FormDataFetchArgs, PageAction } from "../types";
 
 const useFetchData = (props: FormDataFetchArgs) => {
     const { configUrl, dataUrl, dispatch } = props;
@@ -13,7 +13,7 @@ const useFetchData = (props: FormDataFetchArgs) => {
                 const dataResponse = await server.get(dataUrl);
 
                 dispatch({
-                    type: PageActionType.SET_INITIAL_STATE,
+                    type: PageAction.SET_INITIAL_STATE,
                     payload: {
                         formConfig: formConfigResponse.data,
                         data: dataResponse.data,

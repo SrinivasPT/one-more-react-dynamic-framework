@@ -2,7 +2,7 @@ import _ from "lodash";
 import log from "loglevel";
 import { useContext } from "react";
 import { PageContext } from "../context";
-import { PageActionType } from "../types";
+import { PageAction } from "../types";
 import useValidation from "./use-validation";
 
 const useControl = () => {
@@ -23,7 +23,7 @@ const useControl = () => {
     };
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>, dataKey: string) => {
-        dispatch({ type: PageActionType.SET_STATE_FOR_KEY, payload: { dataKey, value: event.target.value } });
+        dispatch({ type: PageAction.SET_STATE_FOR_KEY, payload: { dataKey, value: event.target.value } });
     };
 
     const evaluateExpression = (expression: string | undefined): any => {

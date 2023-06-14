@@ -7,7 +7,7 @@ const LAYOUTS: any = {
 };
 
 const LayoutBuilder: React.FC<LayoutBuilderProps> = ({ control, children }) => {
-    const LayoutComponent = LAYOUTS[control.type ?? "CARD"];
+    const LayoutComponent = LAYOUTS[control.layout ?? "CARD"];
     return <LayoutComponent control={control} children={children} />;
 };
 

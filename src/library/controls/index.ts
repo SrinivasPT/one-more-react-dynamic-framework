@@ -10,3 +10,6 @@ export { default as NumberFormControl } from "./molecules/number-form-control";
 export { default as RadioFormControl } from "./molecules/radio-form-control";
 export { default as SelectFormControl } from "./molecules/select-form-control";
 export { default as TextFormControl } from "./molecules/text-form-control";
+
+export { default as Error } from "./organisms/error";
+export { default as FreeFormGrid } from "./organisms/free-form-grid";
