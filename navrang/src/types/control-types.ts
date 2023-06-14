@@ -1,7 +1,9 @@
+import { PageContextProps } from "./context-types";
+
 export interface InputProps {
     id: string;
     label: string;
-    type: string;
+    type: "INPUT" | "SELECT" | "RADIO";
     dataKey?: string;
     subType?: string;
     className?: string;
@@ -25,4 +27,5 @@ export interface InputProps {
 export interface ControlProps {
     control: InputProps;
     dataKey?: string;
+    context: PageContextProps;
 }

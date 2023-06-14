@@ -1,7 +1,3 @@
-// export * from "./atoms";
-// export * from "./molecules";
-// // export * from "./organisms";
-
 export { default as Button } from "./atoms/button";
 export { default as Check } from "./atoms/check";
 export { default as Input } from "./atoms/input";

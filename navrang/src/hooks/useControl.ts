@@ -1,15 +1,13 @@
 import _ from "lodash";
 import log from "loglevel";
-import { useContext } from "react";
-import { PageContext } from "../context";
-import { PageActionType } from "../types";
+import { PageActionType, PageContextProps } from "../types";
 
-const useControl = () => {
-    const { state, dispatch } = useContext(PageContext);
+const useControl = (context: PageContextProps) => {
+    const { state, dispatch } = context;
 
     const getDynamicProps = (props: any) => {
         const dataKey = props.control.dataKey ?? props.dataKey;
-        const data = _.get(state, dataKey) ?? "";
+        const data = _.get(state.data.current, dataKey) ?? "";
         const isHidden = evaluateExpression(props.control?.hideExpression);
         const isReadOnly = evaluateExpression(props.control?.readOnlyExpression);
         return { dataKey, data, isHidden, isReadOnly, control: props.control };

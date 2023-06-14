@@ -7,11 +7,24 @@
         "controls": [
             {
                 "id": "firstName",
-                "dataKey": "firstName",
                 "label": "First Name",
+                "type": "FC_TEXT",
+                "required": true,
+                "placeholder": "Enter your First Name"
+            },
+            {
+                "id": "lastName",
+                "label": "Last Name",
+                "type": "FC_TEXT",
+                "required": true,
+                "placeholder": "Enter your Last Name"
+            },
+            {
+                "id": "addressLineOne",
+                "label": "Address Line 1",
                 "type": "INPUT",
                 "required": true,
-                "placeholder": "Enter your first name"
+                "placeholder": "Enter your Address Line One"
             }
         ]
     },

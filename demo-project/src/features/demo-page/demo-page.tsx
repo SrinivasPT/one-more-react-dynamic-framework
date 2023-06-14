@@ -42,7 +42,7 @@ const DemoPage = () => {
 
     return (
         <PageContext.Provider value={{ state, dispatch }}>
-            <SectionBuilder control={state.formConfig} />
+            {!state.uiState.isLoading && <SectionBuilder control={state.formConfig} context={{ state, dispatch }} />}
         </PageContext.Provider>
     );
 };
