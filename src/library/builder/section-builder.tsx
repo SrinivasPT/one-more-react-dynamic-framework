@@ -1,7 +1,7 @@
 import React from "react";
 import { SectionBuilderProps } from "../types";
-import ControlBuilder from "./ControlBuilder";
-import LayoutBuilder from "./LayoutBuilder";
+import ControlBuilder from "./control-builder";
+import LayoutBuilder from "./layout-builder";
 
 const SectionBuilder: React.FC<SectionBuilderProps> = ({ control, dataKey = control.dataKey }) => {
     const controls = control.controls;

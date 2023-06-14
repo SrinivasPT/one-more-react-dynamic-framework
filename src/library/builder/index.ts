@@ -1,3 +1,3 @@
-export { default as ControlBuilder } from "./ControlBuilder";
-export { default as LayoutBuilder } from "./LayoutBuilder";
-export { default as SectionBuilder } from "./SectionBuilder";
+export { default as ControlBuilder } from "./control-builder";
+export { default as LayoutBuilder } from "./layout-builder";
+export { default as SectionBuilder } from "./section-builder";

@@ -1,2 +1,2 @@
-export { default as useControl } from "./useControl";
-export { default as useFetchData } from "./useFetchData";
+export { default as useControl } from "./use-control";
+export { default as useFetchData } from "./use-fetch-data";
