@@ -35,11 +35,23 @@ interface ErrorState {
 export interface PageState {
     formConfig: any;
     data: Data;
+    domain: DomainData;
     actions: any;
     uiState: UIState;
     filter: Filter;
     pagination: Pagination;
     error: ErrorState;
+}
+
+export interface DomainData {
+    [key: string]: Domain[];
+}
+
+export interface Domain {
+    code: string;
+    text: string;
+    parentId: string;
+    order: number;
 }
 
 export const PageAction = {

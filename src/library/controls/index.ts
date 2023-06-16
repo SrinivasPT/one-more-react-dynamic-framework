@@ -1,6 +1,7 @@
 export { default as Button } from "./atoms/button";
 export { default as Check } from "./atoms/check";
 export { default as Input } from "./atoms/input";
+export { default as Label } from "./atoms/label";
 export { default as Radio } from "./atoms/radio";
 export { default as Select } from "./atoms/select";
 

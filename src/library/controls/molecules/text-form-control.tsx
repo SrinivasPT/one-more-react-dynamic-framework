@@ -1,14 +1,13 @@
 import React from "react";
 import { ControlProps } from "../../types";
 import Input from "../atoms/input";
+import Label from "../atoms/label";
 
 const TextFormControl = (props: ControlProps) => {
-    const { id, className, label } = props.control;
+    const { className } = props.control;
     return (
         <div className={className}>
-            <label htmlFor={id} className="form-label">
-                {label}
-            </label>
+            <Label {...props} />
             <Input {...props} />
         </div>
     );

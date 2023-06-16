@@ -1,6 +1,6 @@
 import _ from "lodash";
 import log from "loglevel";
-import { useContext } from "react";
+import { ChangeEvent, useContext } from "react";
 import { PageContext } from "../context";
 import { PageAction } from "../types";
 import useValidation from "./use-validation";
@@ -22,8 +22,20 @@ const useControl = () => {
         return { dataKey, data, isHidden, isReadOnly, control: props.control, isValid, errorMessages, state };
     };
 
-    const onChange = (event: React.ChangeEvent<HTMLInputElement>, dataKey: string) => {
+    const onChange = (event: React.ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>, dataKey: string) => {
         dispatch({ type: PageAction.SET_STATE_FOR_KEY, payload: { dataKey, value: event.target.value } });
+    };
+
+    const getControlValue = (dataKey: string) => {
+        if (_.isNil(dataKey)) return "";
+        return _.get(state.data.current, dataKey);
+    };
+
+    const getParentKey = (dataKey: string | undefined) => {
+        if (_.isNil(dataKey)) return "";
+        const parts = dataKey.split(".");
+        parts.pop();
+        return parts.join(".");
     };
 
     const evaluateExpression = (expression: string | undefined): any => {
@@ -41,7 +53,7 @@ const useControl = () => {
         }
     };
 
-    return { evaluateExpression, onChange, getDynamicProps };
+    return { evaluateExpression, onChange, getDynamicProps, getControlValue, getParentKey };
 };
 
 export default useControl;

@@ -7,6 +7,7 @@ const PageReducer = (state: PageState, action: any) => {
             state.formConfig = action.payload.formConfig;
             state.data.original = action.payload.data;
             state.data.current = action.payload.page ?? action.payload.data;
+            state.domain = action.payload.domain;
             state.uiState.isLoading = false;
             break;
         case PageAction.SET_STATE_FOR_KEY:

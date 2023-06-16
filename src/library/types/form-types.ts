@@ -1,7 +1,6 @@
 import { PageAction } from "./context-types";
 
 export interface FormDataFetchArgs {
-    configUrl: string;
-    dataUrl: string;
+    pageName: string;
     dispatch: React.Dispatch<PageAction>;
 }

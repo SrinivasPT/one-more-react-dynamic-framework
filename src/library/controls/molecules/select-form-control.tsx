@@ -1,14 +1,14 @@
 import React from "react";
 import { ControlProps } from "../../types";
+import Label from "../atoms/label";
 import Select from "../atoms/select";
 
 const SelectFormControl = (props: ControlProps) => {
+    const { className } = props.control;
     return (
-        <div className="mb-3">
-            <label htmlFor="exampleFormControlInput1" className="form-label">
-                Email address
-            </label>
-            <Select />
+        <div className={className}>
+            <Label {...props} />
+            <Select {...props} />
         </div>
     );
 };

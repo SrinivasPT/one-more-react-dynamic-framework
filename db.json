@@ -61,21 +61,24 @@
                         "className": "col-md-6"
                     },
                     {
-                        "id": "city",
-                        "label": "City",
-                        "type": "FC_TEXT",
+                        "id": "country",
+                        "label": "Country",
+                        "type": "FC_SELECT",
                         "dataType": "STRING",
+                        "domain": "COUNTRY",
                         "required": true,
-                        "placeholder": "Enter City",
+                        "placeholder": "Enter Country",
                         "className": "col-md-6"
                     },
                     {
-                        "id": "country",
-                        "label": "Country",
-                        "type": "FC_TEXT",
+                        "id": "city",
+                        "label": "City",
+                        "type": "FC_SELECT",
                         "dataType": "STRING",
+                        "domain": "CITY",
+                        "parentIdForDomain": "country",
                         "required": true,
-                        "placeholder": "Enter Country",
+                        "placeholder": "Enter City",
                         "className": "col-md-6"
                     }
                 ]
@@ -84,5 +87,19 @@
     },
     "DEMO_DATA": {
         "personal": { "firstName": "John", "address": [] }
+    },
+    "DOMAIN_DATA": {
+        "COUNTRY": [
+            { "code": "INDIA", "text": "India", "parentId": null, "order": 1 },
+            { "code": "USA", "text": "USA", "parentId": null, "order": 1 }
+        ],
+        "CITY": [
+            { "code": "HYDERABAD", "text": "Hyderabad", "parentId": "INDIA", "order": 1 },
+            { "code": "BANGALORE", "text": "Bangalore", "parentId": "INDIA", "order": 2 },
+            { "code": "CHENNAI", "text": "Chennai", "parentId": "INDIA", "order": 3 },
+            { "code": "CHARLOTTE", "text": "Charlotte", "parentId": "USA", "order": 1 },
+            { "code": "DALLAS", "text": "Dallas", "parentId": "USA", "order": 2 },
+            { "code": "NEW_YORK", "text": "New York", "parentId": "USA", "order": 3 }
+        ]
     }
 }

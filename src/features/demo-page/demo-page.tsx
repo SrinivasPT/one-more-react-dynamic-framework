@@ -7,11 +7,7 @@ import { useFetchData } from "../../library/hooks";
 const DemoPage = () => {
     const [state, dispatch] = useImmerReducer(PageReducer, PageInitialState);
 
-    useFetchData({
-        configUrl: "http://localhost:4001/DEMO_PAGE_CONFIG",
-        dataUrl: "http://localhost:4001/DEMO_DATA",
-        dispatch,
-    });
+    useFetchData({ pageName: "DEMO", dispatch });
 
     if (state.uiState.isLoading) return <div>Loading...</div>;
 

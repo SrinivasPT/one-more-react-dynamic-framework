@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FreeFormGrid, Input, Radio, Select, TextFormControl } from "../controls";
+import { FreeFormGrid, Input, Radio, Select, SelectFormControl, TextFormControl } from "../controls";
 import { ControlBuilderProps } from "../types";
 
 const ControlBuilder: React.FC<ControlBuilderProps> = ({ control, dataKey, mode }) => {
@@ -9,6 +9,7 @@ const ControlBuilder: React.FC<ControlBuilderProps> = ({ control, dataKey, mode 
         SELECT: Select,
         RADIO: Radio,
         FC_TEXT: TextFormControl,
+        FC_SELECT: SelectFormControl,
         FREE_FORM_GRID: FreeFormGrid,
     };
 

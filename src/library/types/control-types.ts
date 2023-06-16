@@ -1,5 +1,3 @@
-import { PageContextProps } from "./context-types";
-
 export interface InputProps {
     id: string;
     label: string;
@@ -8,6 +6,12 @@ export interface InputProps {
     dataKey?: string;
     subType?: string;
     className?: string;
+
+    // Dropdown
+    domain?: string;
+    parentIdForDomain: string;
+
+    // Input Type
     placeholder?: string;
     defaultValue?: string;
     required?: boolean;
@@ -15,6 +19,8 @@ export interface InputProps {
     maxLength?: number;
     min?: number;
     max?: number;
+
+    // Common
     hideExpression?: string;
     readOnlyExpression?: string;
     validationExpression?: string;
@@ -29,5 +35,5 @@ export interface InputProps {
 export interface ControlProps {
     control: InputProps;
     dataKey?: string;
-    context: PageContextProps;
+    // context: PageContextProps;
 }

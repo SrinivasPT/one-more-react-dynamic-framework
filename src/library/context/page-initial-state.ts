@@ -8,6 +8,7 @@ const PageInitialState: PageState = {
         searchResults: [],
         selectedDetail: {},
     },
+    domain: {},
     uiState: {
         isLoading: true,
         showErrors: false,
