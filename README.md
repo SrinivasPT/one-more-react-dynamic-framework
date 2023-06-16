@@ -26,7 +26,7 @@ This project is designed for web developers who require an efficient library for
 Clone the repository and install dependencies:
 
 ```
-git clone https://github.com/username/project.git
+git clone https://github.com/SrinivasPT/react-dynamic-forms-vnext.git
 cd project
 npm install
 ```
