@@ -16,12 +16,13 @@ const Select = (props: ControlProps) => {
         <>
             <select
                 className={`form-select ${isValid || !state.uiState.showErrors ? "" : "error"}`}
-                aria-label="Default select example"
+                aria-label={control.label}
+                disabled={isReadOnly ?? false}
                 onChange={(event) => onChange(event, dataKey)}
             >
                 <option value="">--Select--</option>
                 {options.map((item: Domain) => (
-                    <option key={item.code} value={item.code}>
+                    <option key={item.code} value={item.code} defaultValue={data}>
                         {item.text}
                     </option>
                 ))}
