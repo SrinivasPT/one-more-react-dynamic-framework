@@ -14,7 +14,7 @@
                 "dataType": "STRING",
                 "required": true,
                 "placeholder": "Enter your Name",
-                "className": "col-md-6"
+                "width": "6"
             },
             {
                 "id": "age",
@@ -23,7 +23,7 @@
                 "dataType": "NUMBER",
                 "required": true,
                 "placeholder": "Enter your Age",
-                "className": "col-md-6"
+                "width": "6"
             },
             {
                 "id": "dob",
@@ -32,13 +32,62 @@
                 "dataType": "STRING",
                 "required": true,
                 "placeholder": "Enter your Date Of Birth",
-                "className": "col-md-6"
+                "width": "6"
             },
             {
-                "id": "address",
+                "id": "addressGrid",
                 "title": "Address",
                 "description": "This is a demo page.",
-                "dataKey": "personal.address",
+                "dataKey": "personal.addressGrid",
+                "type": "TABLE",
+                "layout": "CARD",
+                "controls": [
+                    {
+                        "id": "addressLineOne",
+                        "label": "Address Line One",
+                        "type": "LABEL",
+                        "dataType": "STRING",
+                        "required": true,
+                        "placeholder": "Enter Address Line One",
+                        "width": "6"
+                    },
+                    {
+                        "id": "addressLineTwo",
+                        "label": "Address Line Two",
+                        "type": "LABEL",
+                        "dataType": "STRING",
+                        "required": true,
+                        "placeholder": "Enter Address Line One",
+                        "width": "6"
+                    },
+                    {
+                        "id": "country",
+                        "label": "Country",
+                        "type": "CODE_LABEL",
+                        "dataType": "STRING",
+                        "domain": "COUNTRY",
+                        "required": true,
+                        "placeholder": "Enter Country",
+                        "width": "6"
+                    },
+                    {
+                        "id": "city",
+                        "label": "City",
+                        "type": "CODE_LABEL",
+                        "dataType": "STRING",
+                        "domain": "CITY",
+                        "parentIdForDomain": "country",
+                        "required": true,
+                        "placeholder": "Enter City",
+                        "width": "6"
+                    }
+                ]
+            },
+            {
+                "id": "addressFreeFormGrid",
+                "title": "Address",
+                "description": "This is a demo page.",
+                "dataKey": "personal.addressFreeFormGrid",
                 "type": "FREE_FORM_GRID",
                 "layout": "CARD",
                 "controls": [
@@ -49,7 +98,7 @@
                         "dataType": "STRING",
                         "required": true,
                         "placeholder": "Enter Address Line One",
-                        "className": "col-md-6"
+                        "width": "6"
                     },
                     {
                         "id": "addressLineTwo",
@@ -58,7 +107,7 @@
                         "dataType": "STRING",
                         "required": true,
                         "placeholder": "Enter Address Line One",
-                        "className": "col-md-6"
+                        "width": "6"
                     },
                     {
                         "id": "country",
@@ -68,7 +117,7 @@
                         "domain": "COUNTRY",
                         "required": true,
                         "placeholder": "Enter Country",
-                        "className": "col-md-6"
+                        "width": "6"
                     },
                     {
                         "id": "city",
@@ -79,14 +128,21 @@
                         "parentIdForDomain": "country",
                         "required": true,
                         "placeholder": "Enter City",
-                        "className": "col-md-6"
+                        "width": "6"
                     }
                 ]
             }
         ]
     },
     "DEMO_DATA": {
-        "personal": { "firstName": "John", "address": [] }
+        "personal": {
+            "firstName": "John",
+            "addressFreeFormGrid": [{}, {}],
+            "addressGrid": [
+                { "addressLineOne": "JJ 7098, Xenon", "addressLineTwo": "One Street", "country": "INDIA", "city": "HYDERABAD" },
+                { "addressLineOne": "DD 7098, Times", "addressLineTwo": "Two Street", "country": "INDIA", "city": "BANGALORE" }
+            ]
+        }
     },
     "DOMAIN_DATA": {
         "COUNTRY": [

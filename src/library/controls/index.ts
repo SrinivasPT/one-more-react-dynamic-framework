@@ -1,5 +1,6 @@
 export { default as Button } from "./atoms/button";
 export { default as Check } from "./atoms/check";
+export { default as CodeLabel } from "./atoms/code-label";
 export { default as Input } from "./atoms/input";
 export { default as Label } from "./atoms/label";
 export { default as Radio } from "./atoms/radio";
@@ -14,3 +15,4 @@ export { default as TextFormControl } from "./molecules/text-form-control";
 
 export { default as Error } from "./organisms/error";
 export { default as FreeFormGrid } from "./organisms/free-form-grid";
+export { default as TableControl } from "./table-control";

@@ -5,7 +5,7 @@ export interface InputProps {
     dataType: "STRING" | "NUMBER" | "DATE" | "BOOLEAN" | "OBJECT" | "ARRAY";
     dataKey?: string;
     subType?: string;
-    className?: string;
+    width: number;
 
     // Dropdown
     domain?: string;

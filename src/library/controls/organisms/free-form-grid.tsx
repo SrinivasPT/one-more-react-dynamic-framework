@@ -4,6 +4,7 @@ import { SectionBuilder } from "../../builder";
 import { PageContext } from "../../context";
 import { useDispatchAction } from "../../hooks";
 import { ControlProps, PageAction } from "../../types";
+import { getControlWidthClassName } from "../control-functions";
 
 const FreeFormGrid: React.FC<ControlProps> = ({ control, dataKey: propsDataKey }) => {
     const { state, dispatch } = useContext(PageContext);
@@ -31,7 +32,7 @@ const FreeFormGrid: React.FC<ControlProps> = ({ control, dataKey: propsDataKey }
     return (
         <div className="row">
             {data.map((item: any, index: number) => (
-                <div key={`${dataKey}-${index}`} className={`row ${control?.className} mb-3`}>
+                <div key={`${dataKey}-${index}`} className={`row ${getControlWidthClassName(control)} mb-3`}>
                     <div className="d-flex">
                         <div className="flex-grow-1">
                             <SectionBuilder control={control} dataKey={`${dataKey}.[${index}]`} />

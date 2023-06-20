@@ -1,13 +1,12 @@
 import React from "react";
+import { useControl } from "../../hooks";
 import { ControlProps } from "../../types";
 
 const Label = (props: ControlProps) => {
-    const { id, label } = props.control;
-    return (
-        <label htmlFor={id} className="form-label">
-            {label}
-        </label>
-    );
+    const { getDynamicProps, onChange } = useControl();
+    const { data } = getDynamicProps(props);
+
+    return <label className="form-label">{data}</label>;
 };
 
 export default Label;

@@ -15,11 +15,12 @@ const useControl = () => {
         const data = _.get(state.data.current, dataKey) ?? "";
         const isHidden = evaluateExpression(props.control?.hideExpression);
         const isReadOnly = evaluateExpression(props.control?.readOnlyExpression);
+        const className = getControlWidthClassName(props.control);
 
         // Validate the field
         const { isValid, errorMessages } = validate(props.control, data);
 
-        return { dataKey, data, isHidden, isReadOnly, control: props.control, isValid, errorMessages, state };
+        return { dataKey, data, isHidden, isReadOnly, control: props.control, isValid, errorMessages, state, className };
     };
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>, dataKey: string) => {
@@ -29,6 +30,10 @@ const useControl = () => {
     const getControlValue = (dataKey: string) => {
         if (_.isNil(dataKey)) return "";
         return _.get(state.data.current, dataKey);
+    };
+
+    const getControlWidthClassName = (control: any) => {
+        return `col-lg-${control.width} col-md-${control.width}`;
     };
 
     const getParentKey = (dataKey: string | undefined) => {

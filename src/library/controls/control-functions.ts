@@ -28,3 +28,7 @@ export const evaluateExpression = (expression: string | undefined, context: Page
         return null;
     }
 };
+
+export const getControlWidthClassName = (control: any) => {
+    return `col-lg-${control.width} col-md-${control.width}`;
+};
