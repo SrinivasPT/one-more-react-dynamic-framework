@@ -21,6 +21,10 @@ With an emphasis on maintainability and consistency, the library incorporates a 
 
 This project is designed for web developers who require an efficient library for dynamic page generation and robust state management. It is applicable to a wide range of application scenarios, from single-page applications to large-scale web applications, ensuring consistency and maintainability throughout the project lifecycle.
 
+## Generated UI
+
+![Generated Screenshot](./public/gen-ui-screen-shot.png)
+
 ## Installation & Usage
 
 Clone the repository and install dependencies:
